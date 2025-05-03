@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login into one piece family</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 20vh;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      background: url('gumu gumu nomi model nika.jpg')no-repeat center;
+      background-size: 95%;
+
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 100px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      backdrop-filter: blur(0px);
+      color: #fff;
+      width: 300px;
+      transition: all 0.3s ease;
+    }
+
+    .login-container h2 {
+      position: 0px , 10vh;
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .login-container:hover{
+      background: url('fab.jpg')no-repeat center center/cover;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 10px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    .form-group label {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #fff;
+      pointer-events: none;
+      transition: 0.3s ease;
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label {
+      top: 5px;
+      font-size: 12px;
+      color: #f0f0f0;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #00c6ff;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background: #04ff00;
+    }
+    .sign-btn{
+      text-align: center;
+       padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #00c6ff;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-left: 70px;
+    }
+    .sign-btn:hover{
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <input type="text" id="username" placeholder="username " required>
+        <label for="username">Username</label>
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" placeholder="password " required>
+        <label for="password">Password</label>
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+      <p>Dont have an account!?...<button type="alink" class="sign-btn"><a href="registration.html">Sing UP</a></button></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Redirect on login
+      window.location.href = "Index.html"; // Change this link
+    });
+   
+  </script>
+</body>
+</html>
